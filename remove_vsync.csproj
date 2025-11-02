@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>remove_vsync</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <Nullable>enable</Nullable>
+        <AssemblyName>remove_vsync</AssemblyName>
+        <LangVersion>latest</LangVersion>
+        <Optimize>False</Optimize>
+        <DebugType>embedded</DebugType>
+        <BaseOutputPath></BaseOutputPath>
+    </PropertyGroup>
+
+    <Import Project="btd6.targets" Condition="Exists('btd6.targets')" />
+    <Import Project="C:\Dev\btd6.targets" Condition="!Exists('btd6.targets') AND Exists('C:\Dev\btd6.targets')" />
+</Project>
